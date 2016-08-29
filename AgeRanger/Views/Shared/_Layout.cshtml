@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Age Ranger</title>
+	@Styles.Render("~/Content/css")
+	@Scripts.Render("~/bundles/jquery")
+	@Scripts.Render("~/bundles/angular")
+</head>
+<body>
+	<div class="Site">
+		<div class="Head">
+			<div class="Title">Age Ranger</div>
+			<div class="Subtitle">AgeRanger is a world leading application designed to identify person's age group!</div>
+		</div>
+		<div class="Main">
+			@RenderBody()
+		</div>
+
+		@RenderSection("scripts", required: false)
+	</div>
+</body>
+</html>

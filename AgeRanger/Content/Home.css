@@ -1,0 +1,73 @@
+﻿.ListRecords
+{
+	padding-top: 5px;
+}
+
+.TableRecord
+{
+	width: 100%;
+}
+
+.TableRecord thead
+{
+	color: black;
+	background-color: darkgray;
+}
+
+.TableRecord th:nth-child(1)
+{
+}
+
+.TableRecord th:nth-child(2)
+{
+}
+
+.TableRecord th:nth-child(3)
+{
+	width: 60px;
+}
+
+.TableRecord th:nth-child(4)
+{
+	width: 100px;
+}
+
+.TableRecord th:nth-child(5)
+{
+	width: 125px;
+}
+
+.TableRecord tr
+{
+	border-top: 1px solid gray;
+	border-bottom: 1px solid gray;
+}
+
+.TableRecord tr:nth-child(even)
+{
+	background-color: #f0f0f0;
+}
+
+.TableRecord td, th
+{
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+#txtFirstName, #txtLastName
+{
+	width: 100%;
+}
+
+#txtAge
+{
+	width: 100%;
+}
+
+.Btn
+{
+	width: 55px;
+	height: 22px;
+	font-size: 15px;
+	cursor: pointer;
+}

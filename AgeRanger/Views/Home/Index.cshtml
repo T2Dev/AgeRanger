@@ -1,0 +1,40 @@
+﻿@Scripts.Render("~/Scripts/home")
+@Styles.Render("~/Content/home")
+
+<div ng-app="Ang" ng-controller="ListRecords">
+	<div class="Search">
+		<input id="txtSearchFirstName" type="text" placeholder="First name" />&nbsp;
+		<input id="txtSearchLastName" type="text" placeholder="Last name" />&nbsp;
+		<button id="btnSearch" class="Btn" ng-click="SearchRecords()">Search</button>
+	</div>
+
+	<div class="ListRecords">
+		<table class="TableRecord">
+			<thead>
+				<tr>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Age</th>
+					<th>Age Group</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="x in Records">
+					<td>{{ x.FirstName }}</td>
+					<td>{{ x.LastName }}</td>
+					<td>{{ x.Age }}</td>
+					<td>{{ x.AgeGroup }}</td>
+					<td><button id="lnkUpdRecord" class="Btn" ng-click="UpdRecord(x.ID)">Edit</button>&nbsp;<button id="lnkDelRecord" class="Btn" ng-click="DelRecord(x.ID)">Delete</button></td>
+				</tr>
+				<tr>
+					<td style="padding: 0px"><input id="txtFirstName" type="text" placeholder="Enter first name" ng-model="Form.FirstName" ng-cloak ng-show="Adding" /></td>
+					<td style="padding: 0px"><input id="txtLastName" type="text" placeholder="Enter last name" ng-model="Form.LastName" ng-cloak ng-show="Adding" /></td>
+					<td style="padding: 0px"><input id="txtAge" type="number" min="1" max="999" ng-model="Form.Age" ng-cloak ng-show="Adding" /></td>
+					<td></td>
+					<td><button id="lnkAddNew" class="Btn" ng-cloak ng-hide="Adding" ng-click="AddRecord()">Add</button><button id="btnSave" class="Btn" ng-cloak ng-show="Adding" ng-click="SaveRecord()">Save</button>&nbsp;<button id="btnCancel" class="Btn" ng-show="Adding" ng-click="CancelRecord()">Cancel</button></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

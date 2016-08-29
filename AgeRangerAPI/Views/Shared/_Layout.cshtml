@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width" />
+	<title>@ViewBag.Title</title>
+	@Styles.Render("~/Content/css")
+</head>
+<body>
+	<div>
+		<ul class="Menu">
+			<li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>
+			<li>@Html.ActionLink("API", "Index", "Help", new { area = "" }, null)</li>
+		</ul>
+	</div>
+	<div class="Content">
+		@RenderBody()
+		<hr />
+		<footer>
+			<p>&copy; @DateTime.Now.Year - Age Ranger Application</p>
+		</footer>
+	</div>
+
+	@RenderSection("scripts", required: false)
+</body>
+</html>
